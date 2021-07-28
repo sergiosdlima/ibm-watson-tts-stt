@@ -20,6 +20,8 @@ Então, vamos usar o pip para instalar as bibliotecas que vamos usar:
 
 Agora, sempre que você executar um script Python, o executável, as configurações e os pacotes do ambiente virtual Python serão usados em vez do executável Python global.
 
+Crie um arquivo .env com as variáveis de ambiente `API_KEY` e `TTS_SERVICE_URL`.
+
 Para parar de usar o ambiente virtual, basta desativá-lo executando:
 
 `deactivate`
@@ -37,6 +39,8 @@ Verifique se ocorreu tudo bem:
 Inicie uma sessão:
 
 `heroku login`
+
+Configure as variáveis de ambiente `API_KEY` e `TTS_SERVICE_URL`.
 
 ## Referências
 
