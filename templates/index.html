@@ -4,6 +4,11 @@
     <title>IBM Watson: TTS e STT</title>
     <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="static/css/application.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="static/favicon_io/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon_io/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -13,22 +18,28 @@
         <hr />
         <p>Esta é uma página que demonstra o uso do IBM Watson Text to Speech e Speech to Text em idioma português brasileiro.</p>
       </div>
-      <form id="input-form" class="">
-        <div class="form-group">
-          <label for="input-text">Texto</label>
-          <textarea id="input-text" class="form-control" rows="3" placeholder="Entre com o texto para ser sintetizado aqui!" autofocus></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Enviar</button>
-      </form>
       <div class="page-header">
-        <h2>Audio Log</h2>
-        <div id="audio-log">
-        </div>
+        <h2>Texto para fala (TTS)</h2>
+        <p>Escreve um texto e clique no botão enviar para que a IBM Watson sintetize em fala.</p>
+        <form id="input-form" class="">
+          <div class="form-group">
+            <label for="input-text">Texto</label>
+            <textarea id="input-text" class="form-control" rows="3" placeholder="Entre com o texto aqui!" autofocus></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar</button> <span id="text-log"></span>
+        </form>
       </div>
-      <div id="audio-file">
+      <div class="page-header">
+        <h2>Fala para texto (STT)</h2>
+        <p>Clique no botão falar para que a IBM Watson reconheça sua voz e transcreva para texto.</p>
+        <div class="form-group">
+          <label for="audio-log">Resultado</label>
+          <textarea id="audio-log" class="form-control" rows="3" readonly></textarea>
+        </div>
+        <button id="start-speech" class="btn btn-primary" type="button">Falar</button>
+        <button id="stop-speech" class="btn btn-secondary" type="button">Parar</button>
       </div>
     </div>
-
 
     <script type="text/javascript" src="static/js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="static/js/application.js"></script>
