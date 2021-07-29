@@ -48,7 +48,9 @@ Crie o aplicativo Heroku para implantar:
 
 `heroku create`
 
-Implante o código com `git push`.
+## Deploy no Heroku
+
+Implante o código com `git push heroku`.
 
 ## Referências
 
